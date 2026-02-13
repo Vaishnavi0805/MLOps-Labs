@@ -131,15 +131,6 @@ python -m unittest test.test_unittest -v
 python -m unittest test.test_unittest.TestStatisticsCalculator
 ```
 
-### Test Coverage
-
-The test suites cover:
-- ✅ Basic statistical calculations (mean, median, mode, variance, std deviation)
-- ✅ Edge cases (empty lists, single values, negative numbers)
-- ✅ Error handling (non-numeric values, invalid inputs)
-- ✅ Parametrized tests for multiple scenarios
-- ✅ Multimodal distributions
-- ✅ Comprehensive statistics function
 
 ## GitHub Actions CI/CD
 
@@ -253,23 +244,3 @@ git push -u origin main
 7. **GitHub Actions will automatically run** tests on your PR
 
 8. **Merge** once tests pass
-
-## Key Differences from Original Lab
-
-This implementation differs from the standard calculator lab in the following ways:
-
-1. **Functionality**: Implements statistical operations instead of basic arithmetic
-2. **Real-world Application**: Statistics are fundamental in data science and ML
-3. **Complex Logic**: Mode calculation and variance require more sophisticated algorithms
-4. **Enhanced Testing**: Includes parametrized tests and edge case handling
-5. **Error Handling**: Comprehensive validation for empty lists and non-numeric inputs
-6. **Documentation**: Detailed docstrings for all functions
-
-
-## Author
-
-**Vaishnavi Sarmalkar**
-- Course: IE-7374 MLOps
-- Institution: Northeastern University
-
-
