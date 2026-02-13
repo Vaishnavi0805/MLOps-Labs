@@ -1,0 +1,52 @@
+name: Github_Lab1 - Testing with Pytest
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Github_Lab1/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Github_Lab1/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        cd Github_Lab1
+        pip install -r requirements.txt
+
+    - name: Run tests and generate XML report
+      run: |
+        cd Github_Lab1
+        pytest --junitxml=pytest-report.xml
+      continue-on-error: false
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: github-lab1-test-results
+        path: Github_Lab1/pytest-report.xml
+
+    - name: Notify on success
+      if: success()
+      run: echo "Tests passed successfully"
+
+    - name: Notify on failure
+      if: failure()
+      run: echo "Tests failed"
