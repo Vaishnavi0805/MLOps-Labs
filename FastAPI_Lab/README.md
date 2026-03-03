@@ -17,7 +17,7 @@ This API uses a Random Forest Classifier trained on the Wine dataset to predict 
 ## Project Structure
 ```
 FastAPI_Lab/
-├── assets/                    # Documentation assets (screenshots, diagrams)
+├── assets/                    # Documentation assets (screenshots)
 ├── model/
 │   └── wine_model.pkl        # Trained Random Forest model
 ├── src/
@@ -46,7 +46,7 @@ FastAPI_Lab/
 
 - Python 3.8 or higher
 - pip package manager
-- Virtual environment (recommended)
+- Virtual environment
 
 ### Step 1: Clone and Navigate
 ```bash
@@ -208,38 +208,4 @@ response = requests.post(url, json=data)
 print(response.json())  # {'response': 0}
 ```
 
-## Understanding Wine Classes
-
-The model predicts one of three wine cultivar classes:
-- **Class 0**: First wine cultivar
-- **Class 1**: Second wine cultivar
-- **Class 2**: Third wine cultivar
-
-Each class represents wines from different grape cultivars grown in the same region of Italy.
-
-## Technical Details
-
-### Model Architecture
-
-- **Algorithm**: Random Forest Classifier
-- **Parameters**:
-  - n_estimators: 100
-  - max_depth: 5
-  - random_state: 42
-- **Train/Test Split**: 70% / 30%
-
-### Data Validation
-
-Pydantic models ensure:
-- All 13 features are provided
-- All values are numeric (float)
-- Data types are correct
-- Automatic error messages for invalid inputs
-
-### API Framework
-
-- **FastAPI**: Modern, fast web framework
-- **Uvicorn**: ASGI server for production
-- **Automatic Documentation**: OpenAPI/Swagger
-- **Type Hints**: Full Python type checking
 
