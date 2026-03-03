@@ -4,13 +4,6 @@ from data import load_data, split_data
 
 
 def train_model(X_train, y_train):
-    """
-    Train a Random Forest Classifier and save the model to a file.
-    
-    Args:
-        X_train (numpy.ndarray): Training features.
-        y_train (numpy.ndarray): Training target values.
-    """
     rf_classifier = RandomForestClassifier(
         n_estimators=100, 
         max_depth=5, 
