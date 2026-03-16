@@ -1,0 +1,36 @@
+# Airflow
+logs/
+plugins/
+airflow.db
+airflow.cfg
+airflow-webserver.pid
+webserver_config.py
+standalone_admin_password.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual Environment
+venv/
+venv_*/
+env/
+
+# Docker
+.env
+
+# Models
+model/*.pkl
+model/*.sav
+
+# Data (if large)
+# data/*.csv
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
