@@ -1,0 +1,31 @@
+# MLflow
+mlruns/
+mlartifacts/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Virtual Environment
+venv/
+venv_*/
+env/
+
+# Models
+*.pkl
+*.h5
+*.pb
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Data (optional - uncomment if dataset is too large)
+# data/*.csv

@@ -1,0 +1,8 @@
+mlflow
+pandas
+matplotlib
+seaborn
+xgboost
+hyperopt
+cloudpickle
+requests
