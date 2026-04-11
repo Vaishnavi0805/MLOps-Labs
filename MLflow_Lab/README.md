@@ -336,7 +336,3 @@ In this lab, we've covered various aspects of the machine learning lifecycle, in
 - Model deployment involves registering the model and transitioning it to the production stage for use in production environments.
 
 - MLflow enables experiment tracking, model versioning, and reproducible ML workflows.
-
-By following these steps, you can effectively develop and deploy machine learning models for various applications.
-
-Thank you for completing this lab!
